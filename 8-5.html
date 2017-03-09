@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{padding: 5px;}
+			input[type='button']{
+				width: 40px;height: 40px;border-radius: 20px;outline: none;
+				margin: 10px 5px 5px 10px;
+			}
+			#t1,#t2{margin-bottom: 5px;}
+			h3{margin-left: 20px;}
+		</style>
+	</head>
+	<body>
+		<lable>会员ID：</lable><input type="text" id="t1" /><br />
+		<lable>姓&nbsp;名：</lable><input type="text" id="t2" /><br />
+		<input type="button" value="添加" onclick="addm()" />
+		<input type="button" value="删除" onclick="remm()"/>
+		<ul id="u1">
+			<h3>俱乐部会员名单</h3>
+		</ul>
+		<script type="text/javascript">
+			var u1=document.getElementById('u1');
+			var idar=new Array();
+			var naar=new Array();
+			function addm(){
+				var t1=document.getElementById('t1');
+				var t2=document.getElementById('t2');
+				var l1=document.createElement('li');
+				var flag=1;
+				if(!t1.value)alert('填写ID');
+				else if(!t2.value)alert('填写姓名');
+				else{
+					for(var i=0;i<idar.length;i++){
+						if(idar[i]==t1.value)
+						{alert('ID重复');flag=-1;}
+					}
+					if(flag==1){
+					idar.push(t1.value);
+					naar.push(t2.value);
+					l1.id=t1.value
+					l1.innerHTML='会员账号'+t1.value+'<br>'+"会员姓名"+t2.value;
+					u1.appendChild(l1);
+				}}
+			}
+			function remm(){
+				var t1=document.getElementById('t1');
+				var t2=document.getElementById('t2');
+				var l1=document.getElementById(t1.value);
+//				alert(l1);
+				if(l1){
+				u1.removeChild(l1);
+				}
+				else alert('删除的用户不存在')
+			}
+		</script>
+	</body>
+</html>
