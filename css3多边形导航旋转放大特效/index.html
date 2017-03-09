@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0px;margin: 0px;
+			}
+			body{
+				background: url(222.jpg);
+				background-size: cover;
+			}
+			#div0{
+				/*background: lightgray;*/
+				width: 600px;height: 500px;
+				margin: auto;
+				margin-top:100px ;
+			}
+			#div0 ul{
+				list-style: none;
+				position: relative;
+			}
+			#div0 ul li{
+				width: 100px;height: 50px;
+				background: rgba(0,0,0,0.3);
+				float: left;
+				text-align: center;line-height: 50px;
+				margin: 10px;
+				position: relative;
+			}
+			#div0 ul li img{
+				margin-top: 10px;
+				margin-left: 10px
+				position: absolute;
+				z-index: 100000;
+				-webkit-transition: all 1s;
+			}
+			#div0 ul li:hover img{
+				-webkit-transform: scale(1.4) rotate(360deg);
+			}
+			#div0 ul li:before,#div0 ul li:after{
+				content: '';
+				width: 100px;height: 50px;
+				position: absolute;left: 0px;top: 0px;
+				background: rgba(0,0,0,0.3);
+			}
+			#div0 ul li:before{
+				transform: rotate(-60deg);
+			}
+			#div0 ul li:after{
+				transform: rotate(60deg);
+			}
+			#div0 ul li:nth-child(5){
+				position: absolute;
+				top: 90px;left: 60px;
+			}
+			#div0 ul li:nth-child(6){
+				position: absolute;
+				top: 90px;left: 180px;
+			}
+			#div0 ul li:nth-child(7){
+				position: absolute;
+				top: 90px;left: 300px;
+			}
+			#div0 ul li:nth-child(8){
+				position: absolute;
+				top: 90px;left: 420px;
+			}
+			/*#div0 ul li:nth-child(9),#div0 ul li:nth-child(10),#div0 ul li:nth-child(11),#div0 ul li:nth-child(12),#div0 ul li:nth-child(13){
+				transform: translateY(180px);
+			}*/
+		</style>
+	</head>
+	<body>
+		<div id="div0">
+			<ul>
+				<li><img src="333.JPG" width="30" height="30"/></li>
+				<li><img src="333.JPG" width="30" height="30"/></li>
+				<li><img src="333.JPG" width="30" height="30"/></li>
+				<li><img src="333.JPG" width="30" height="30"/></li>
+				<li><img src="333.JPG" width="30" height="30"/></li>
+				<li><img src="333.JPG" width="30" height="30"/></li>
+				<li><img src="333.JPG" width="30" height="30"/></li>
+				<li><img src="333.JPG" width="30" height="30"/></li>
+				<li><img src="333.JPG" width="30" height="30"/></li>
+				<!--<li></li><li></li><li></li><li></li><li></li>-->
+			</ul>
+		</div>
+	</body>
+</html>
